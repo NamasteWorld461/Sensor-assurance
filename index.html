@@ -626,7 +626,7 @@ empty.hidden=shown!==0;
  const observed=new WeakMap();
  const observer=("IntersectionObserver" in window)?new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
-   const feature=entry.target,id=feature.dataset.briefId;
+   const feature=entry.target.closest(".research-feature[data-brief-id]");if(!feature)return;const id=feature.dataset.briefId;
    if(entry.isIntersecting&&entry.intersectionRatio>=.5){
     observed.set(feature,true);
     if(!qualified.has(feature)&&!timers.has(feature)){
