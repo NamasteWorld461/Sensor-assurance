@@ -59,6 +59,71 @@ nav .social-placeholder{font-size:inherit!important;font-weight:650;color:#696a7
  nav .navlinks>a{padding:0}
  nav .social-nav{gap:26px}
 }
+
+@media(max-width:650px){
+ nav .wrap{display:block!important}
+ nav .brand{display:inline-block;margin-bottom:13px}
+ nav .navlinks{display:flex!important;width:100%!important;gap:12px 18px!important;flex-wrap:wrap!important;overflow:visible!important;white-space:normal!important;padding:0!important}
+ nav .navlinks a{padding:3px 0!important;white-space:normal!important}
+}
+
+/* Responsive layout refresh — phones, tablets and narrow in-app browsers */
+:root{color-scheme:light}
+html{scroll-padding-top:16px}
+body{min-width:0;overflow-wrap:break-word}
+main,section,article,.wrap,.card{min-width:0;max-width:100%}
+img,video,iframe,svg{max-width:100%;height:auto}
+nav .wrap{max-width:100%}
+nav .navlinks{min-width:0}
+a,button{touch-action:manipulation}
+a:focus-visible,button:focus-visible{outline:3px solid #d72d68;outline-offset:3px}
+@media(max-width:800px){
+ .four,.about,.author,.briefs{grid-template-columns:minmax(0,1fr)!important}
+ .brief.featured{grid-column:auto!important;grid-row:auto!important}
+ .framework-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .head{display:block}
+ .head p{margin-top:12px}
+ .feature-art{max-width:100%}
+ .pageintro{padding:50px 0 20px}
+ .section,.pagecards{padding:40px 0}
+ .card{padding:20px}
+ .footerlinks{gap:12px 20px}
+}
+@media(max-width:650px){
+ .wrap,nav .wrap{width:calc(100% - 36px)!important;margin-inline:auto;padding-left:0!important;padding-right:0!important}
+ nav .wrap{min-height:0!important;padding-top:12px!important;padding-bottom:12px!important}
+ nav .brand{font-size:21px!important;min-width:0!important;max-width:none!important;line-height:1.08!important}
+ nav .navlinks{font-size:15px!important;line-height:1.35!important}
+ .hero{padding:34px 0 36px!important}
+ .hero .eyebrow{font-size:12px;letter-spacing:.12em}
+ .hero h1{font-size:clamp(2.55rem,10.5vw,4.5rem)!important;line-height:1.07!important;letter-spacing:-.045em!important;margin:18px auto 20px!important;overflow-wrap:normal}
+ .hero .lead{font-size:1.08rem!important;line-height:1.5!important}
+ #about-publication{padding:32px 0 38px!important}
+ #about-publication h2{margin-bottom:18px!important}
+ #about-publication .intro{font-size:1.1rem!important;line-height:1.62!important}
+ .section h2,.head h2{font-size:clamp(1.8rem,7vw,2.4rem);line-height:1.2}
+ .pageintro{padding:36px 0 18px!important}
+ .pageintro h1{font-size:clamp(2.35rem,9vw,3.7rem)!important;line-height:1.12!important}
+ .pageintro .lead{font-size:1.1rem}
+ .brief{display:block!important;padding:22px 0!important}
+ .brief .meta{margin-bottom:8px;font-size:12px}
+ .brief h3{font-size:1.35rem!important;line-height:1.35!important}
+ .brief p,.card p{font-size:1rem;line-height:1.7}
+ .two,.four,.about,.author,.briefs,.framework-steps{display:grid;grid-template-columns:minmax(0,1fr)!important;gap:14px}
+ .head{margin-bottom:18px}
+ .source-btn{max-width:100%;white-space:normal}
+ .feature-art{height:180px}
+ .topic-filters{gap:9px;margin-bottom:20px}
+ .topic-filter{min-height:44px;font-size:14px;padding:9px 14px}
+ .card,.callout{border-radius:15px;padding:18px}
+ .footerlinks{display:flex;flex-wrap:wrap;gap:12px 18px}
+ footer{padding:30px 0;font-size:14px}
+}
+@media(max-width:380px){
+ .hero h1{font-size:clamp(2.25rem,10.2vw,2.8rem)!important}
+ .topic-filter{font-size:13px;padding-inline:12px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style></head><body><nav><div class="wrap"><a class="brand" href="/">Aruni<br>Basu</a><div class="navlinks"><a href="/">Assurance Briefs</a><a href="/research.html">Research</a><a href="/author.html">About the Author</a></div></div></nav><main><header class="pageintro"><div class="wrap"><div class="eyebrow">Explore the field</div><h1>Topics</h1><p class="lead">Four connected disciplines for understanding the performance, safety, and compliance of intelligent sensing systems.</p></div></header><section id="pillars" class="pagecards"><div class="wrap"><div class="head"><h2>Four assurance pillars</h2><p>Engineering methods that connect technical performance to repeatable, reviewable evidence across a product lifecycle.</p></div><div class="four">
 <article class="card"><span class="number">01 / SYSTEMS</span><h3>Systems Engineering &amp; V&amp;V</h3><p>Requirements traceability, verification planning, risk-based test selection, test coverage, integration, and sensor performance across operating conditions.</p></article>
 <article class="card"><span class="number">02 / DEPENDABILITY</span><h3>Reliability &amp; Safety</h3><p>Environmental robustness, failure analysis, reliability growth, functional-safety considerations, and the limits of evidence for safety-critical systems.</p></article>
