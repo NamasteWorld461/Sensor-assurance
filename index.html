@@ -95,6 +95,23 @@ footer,.footerlinks,.disclaimer{font-size:14px;line-height:1.7;color:#454753}
 #about-publication h2{margin-bottom:36px}
 #about-publication .intro{font-size:1.22rem;line-height:1.72}
 }
+
+/* Reference-style top ribbon: stacked wordmark and a single horizontal link row */
+nav{background:#fff;border-bottom:1px solid #e7e7eb;position:relative}
+nav .wrap{width:min(calc(100% - 44px),1110px);min-height:114px;display:flex;flex-wrap:nowrap;justify-content:space-between;align-items:center;gap:32px;padding:18px 0}
+nav .brand{color:#141520;font-weight:850;font-size:clamp(23px,2.4vw,30px);letter-spacing:-.035em;line-height:1.13;min-width:150px;max-width:none;white-space:normal;flex:0 0 auto}
+nav .navlinks{display:flex;flex-wrap:nowrap;white-space:nowrap;align-items:center;gap:clamp(22px,3vw,39px);overflow-x:auto;min-width:0;font-size:clamp(16px,1.7vw,21px);line-height:1.4;font-weight:650;color:#696a77;scrollbar-width:none}
+nav .navlinks::-webkit-scrollbar{display:none}
+nav .navlinks>a{flex:0 0 auto;padding:8px 0}
+nav .social-nav{display:inline-flex;gap:clamp(22px,3vw,39px);align-items:center;flex:0 0 auto;border:0;padding:0}
+nav .social-placeholder{font-size:inherit!important;font-weight:650;color:#696a77;text-decoration:none;cursor:default}
+@media(max-width:650px){
+ nav .wrap{width:calc(100% - 34px);padding:22px 0;min-height:126px;gap:24px;align-items:flex-start;flex-wrap:nowrap}
+ nav .brand{font-size:24px;line-height:1.09;min-width:112px;max-width:112px}
+ nav .navlinks{width:auto;flex:1 1 auto;overflow-x:auto;gap:26px;white-space:nowrap;font-size:17px;padding:0;margin:1px 0 0}
+ nav .navlinks>a{padding:0}
+ nav .social-nav{gap:26px}
+}
 </style></head><body>
 <nav><div class="wrap"><a class="brand" href="/">Sensor<br>Assurance</a><div class="navlinks"><a href="#briefs">Assurance Briefs</a><span class="social-nav" aria-label="Social profiles"><a class="social-placeholder" aria-disabled="true" tabindex="-1" title="LinkedIn profile link coming soon">LinkedIn</a><a class="social-placeholder" aria-disabled="true" tabindex="-1" title="Instagram profile link coming soon">Instagram</a></span></div></div></nav>
 <main>
