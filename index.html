@@ -64,8 +64,15 @@ footer,.footerlinks,.disclaimer{font-size:14px;line-height:1.7;color:#454753}
   .eyebrow,.kicker,.meta{font-size:12px;letter-spacing:.06em}
   .head h2,.section h2{line-height:1.18;letter-spacing:-.025em}
 }
+
+.topic-filters{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 28px}
+.topic-filter{font:inherit;font-size:15px;font-weight:650;padding:9px 17px;border-radius:999px;border:1px solid #b8bac4;color:#30323d;background:#fff;cursor:pointer}
+.topic-filter:hover{border-color:#d72d68}
+.topic-filter[aria-pressed="true"]{background:#171820;border-color:#171820;color:#fff}
+.brief[hidden]{display:none!important}
+.filter-empty{color:#525460;padding:18px 0}
 </style></head><body>
-<nav><div class="wrap"><a class="brand" href="/">Sensor<br>Assurance</a><div class="navlinks"><a href="#briefs">Briefs</a><a href="#topics">Topics</a><a href="#research">Research</a><a href="#author">About</a></div></div></nav>
+<nav><div class="wrap"><a class="brand" href="/">Sensor<br>Assurance</a><div class="navlinks"><a href="#briefs">Assurance Briefs</a><a href="#research">Research</a><a href="#author">About the Author</a></div></div></nav>
 <main>
 <header class="hero"><div class="wrap">
 <div class="eyebrow">SENSOR ASSURANCE · INDEPENDENT TECHNICAL PERSPECTIVES</div>
@@ -75,19 +82,39 @@ footer,.footerlinks,.disclaimer{font-size:14px;line-height:1.7;color:#454753}
 </div></header>
 <section class="section" id="about-publication"><div class="wrap"><h2>About</h2>
 <p class="intro">We examine developments in intelligent sensors, engineering standards and verification methods—and explain what they mean for the people designing, validating and assuring real-world systems. Every brief emphasizes source evidence, engineering implications and limitations.</p></div></section>
-<section class="section" id="briefs"><div class="wrap"><h2>Assurance Briefs</h2><div class="stack">
-<article class="brief"><div class="meta">Standards Watch<br>October 2026</div><div><h3>AI observability is becoming part of the assurance conversation</h3><p>IEEE P4213 is developing a framework for AI-system observability. For Physical AI, assurance must consider operational evidence as well as model performance.</p><a class="source" href="https://standards.ieee.org/ieee/4213/12758/" target="_blank" rel="noopener noreferrer">Primary source: IEEE Standards Association ↗</a></div></article>
-<article class="brief"><div class="meta">Validation</div><div><h3>Evidence matters as much as the metric</h3><p>Performance results are more useful when test conditions, uncertainty, traceability, repeatability and operating limits are explicit.</p><a class="source" href="https://www.iso.org/standard/35733.html" target="_blank" rel="noopener noreferrer">Reference: ISO/IEC 17025 ↗</a></div></article>
-<article class="brief"><div class="meta">Automated Systems</div><div><h3>Assurance beyond nominal performance</h3><p>Automated-driving assurance includes operating conditions, limitations and verification evidence—not just ideal-case system performance.</p><a class="source" href="https://saemobilus.sae.org/topics/electrical-electronics-and-avionics/automation/driving-automation/automated-driving-systems" target="_blank" rel="noopener noreferrer">Reference: SAE Mobilus ↗</a></div></article>
-<article class="brief"><div class="meta">LiDAR</div><div><h3>Why sensor validation becomes system-level validation</h3><p>Environmental robustness, synchronization, fault handling, manufacturing variation and lifecycle change influence the evidence required for assurance.</p><a class="source" href="https://arxiv.org/search/?query=lidar+validation&amp;searchtype=all" target="_blank" rel="noopener noreferrer">Explore relevant research ↗</a></div></article>
-</div><a class="plainlink" href="/archive.html">All Assurance Briefs →</a></div></section>
-<section class="section" id="topics"><div class="wrap"><h2>Topics</h2><div class="two">
-<div><h3>Verification &amp; Validation</h3><p>System requirements, test coverage, performance and evidence traceability.</p></div>
-<div><h3>Safety &amp; Reliability</h3><p>Failures, uncertainty, robustness and functional-safety considerations.</p></div>
-<div><h3>Compliance &amp; Standards</h3><p>EMC, product safety, electro-optical requirements and qualification.</p></div>
-<div><h3>Physical AI &amp; Sensors</h3><p>LiDAR, sensing systems and their deployment in the physical world.</p></div>
-</div><a class="plainlink" href="/topics.html">Explore Topics →</a></div></section>
+<section class="section" id="briefs"><div class="wrap"><h2>Assurance Briefs</h2>
+<div class="topic-filters" role="group" aria-label="Filter Assurance Briefs by topic">
+<button class="topic-filter" type="button" data-filter="all" aria-pressed="true">All</button>
+<button class="topic-filter" type="button" data-filter="physical-ai" aria-pressed="false">Physical AI</button>
+<button class="topic-filter" type="button" data-filter="lidar" aria-pressed="false">LiDAR</button>
+<button class="topic-filter" type="button" data-filter="vv" aria-pressed="false">V&amp;V</button>
+<button class="topic-filter" type="button" data-filter="safety" aria-pressed="false">Safety</button>
+<button class="topic-filter" type="button" data-filter="standards" aria-pressed="false">Standards</button>
+</div><div class="stack">
+<article class="brief" data-topics="physical-ai standards"><div class="meta">Standards Watch<br>October 2026</div><div><h3>AI observability is becoming part of the assurance conversation</h3><p>IEEE P4213 is developing a framework for AI-system observability. For Physical AI, assurance must consider operational evidence as well as model performance.</p><a class="source" href="https://standards.ieee.org/ieee/4213/12758/" target="_blank" rel="noopener noreferrer">Primary source: IEEE Standards Association ↗</a></div></article>
+<article class="brief" data-topics="vv standards"><div class="meta">Validation</div><div><h3>Evidence matters as much as the metric</h3><p>Performance results are more useful when test conditions, uncertainty, traceability, repeatability and operating limits are explicit.</p><a class="source" href="https://www.iso.org/standard/35733.html" target="_blank" rel="noopener noreferrer">Reference: ISO/IEC 17025 ↗</a></div></article>
+<article class="brief" data-topics="safety physical-ai"><div class="meta">Automated Systems</div><div><h3>Assurance beyond nominal performance</h3><p>Automated-driving assurance includes operating conditions, limitations and verification evidence—not just ideal-case system performance.</p><a class="source" href="https://saemobilus.sae.org/topics/electrical-electronics-and-avionics/automation/driving-automation/automated-driving-systems" target="_blank" rel="noopener noreferrer">Reference: SAE Mobilus ↗</a></div></article>
+<article class="brief" data-topics="lidar vv"><div class="meta">LiDAR</div><div><h3>Why sensor validation becomes system-level validation</h3><p>Environmental robustness, synchronization, fault handling, manufacturing variation and lifecycle change influence the evidence required for assurance.</p><a class="source" href="https://arxiv.org/search/?query=lidar+validation&amp;searchtype=all" target="_blank" rel="noopener noreferrer">Explore relevant research ↗</a></div></article>
+</div><p class="filter-empty" id="filter-empty" hidden>No briefs in this category yet.</p><a class="plainlink" href="/archive.html">All Assurance Briefs →</a></div></section>
+
 <section class="section" id="research"><div class="wrap"><h2>Research</h2><p class="intro">The Sensor Assurance Framework is an evolving research direction exploring risk-based verification, evidence reuse and assurance arguments for intelligent sensing systems. The methods are proposals under development, not claims of completed external adoption.</p><a class="plainlink" href="/research.html">Explore Research →</a></div></section>
 <section class="section" id="author"><div class="wrap"><h2>About the Author</h2><p class="intro"><strong>Aruni Basu</strong> works in verification, validation, reliability, EMC, functional safety and regulatory compliance of electronic and electro-optical sensing systems. Writing and professional contributions—including publications, books, standards participation and peer review—are grouped under the author profile.</p><a class="plainlink" href="/author.html">Biography &amp; Professional Contributions →</a></div></section>
 </main><footer><div class="wrap"><strong>Sensor Assurance</strong> · Independent technical publication<div class="footerlinks"><a href="/archive.html">Archive</a><a href="/editorial.html">Editorial policy &amp; contact</a><a href="/privacy.html">Privacy</a></div><div>© 2026 Aruni Basu. Views are independent and do not represent employers or standards organizations.</div></div></footer>
-</body></html>
+<script>
+(function(){
+const buttons=Array.from(document.querySelectorAll('.topic-filter'));
+const briefs=Array.from(document.querySelectorAll('#briefs .brief[data-topics]'));
+const empty=document.getElementById('filter-empty');
+buttons.forEach(button=>button.addEventListener('click',()=>{
+const selected=button.dataset.filter;
+buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+let shown=0;
+briefs.forEach(article=>{
+const matches=selected==='all'||article.dataset.topics.split(' ').includes(selected);
+article.hidden=!matches;
+if(matches)shown++;
+});
+empty.hidden=shown!==0;
+}));
+})();
+</script></body></html>
