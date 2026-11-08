@@ -42,6 +42,23 @@ footer,.footerlinks,.disclaimer{font-size:14px;line-height:1.7;color:#454753}
   .eyebrow,.kicker,.meta{font-size:12px;letter-spacing:.06em}
   .head h2,.section h2{line-height:1.18;letter-spacing:-.025em}
 }
+
+/* Reference-style top ribbon: stacked wordmark and a single horizontal link row */
+nav{background:#fff;border-bottom:1px solid #e7e7eb;position:relative}
+nav .wrap{width:min(calc(100% - 44px),1110px);min-height:114px;display:flex;flex-wrap:nowrap;justify-content:space-between;align-items:center;gap:32px;padding:18px 0}
+nav .brand{color:#141520;font-weight:850;font-size:clamp(23px,2.4vw,30px);letter-spacing:-.035em;line-height:1.13;min-width:150px;max-width:none;white-space:normal;flex:0 0 auto}
+nav .navlinks{display:flex;flex-wrap:nowrap;white-space:nowrap;align-items:center;gap:clamp(22px,3vw,39px);overflow-x:auto;min-width:0;font-size:clamp(16px,1.7vw,21px);line-height:1.4;font-weight:650;color:#696a77;scrollbar-width:none}
+nav .navlinks::-webkit-scrollbar{display:none}
+nav .navlinks>a{flex:0 0 auto;padding:8px 0}
+nav .social-nav{display:inline-flex;gap:clamp(22px,3vw,39px);align-items:center;flex:0 0 auto;border:0;padding:0}
+nav .social-placeholder{font-size:inherit!important;font-weight:650;color:#696a77;text-decoration:none;cursor:default}
+@media(max-width:650px){
+ nav .wrap{width:calc(100% - 34px);padding:22px 0;min-height:126px;gap:24px;align-items:flex-start;flex-wrap:nowrap}
+ nav .brand{font-size:24px;line-height:1.09;min-width:112px;max-width:112px}
+ nav .navlinks{width:auto;flex:1 1 auto;overflow-x:auto;gap:26px;white-space:nowrap;font-size:17px;padding:0;margin:1px 0 0}
+ nav .navlinks>a{padding:0}
+ nav .social-nav{gap:26px}
+}
 </style></head><body><nav><div class="wrap"><a class="brand" href="/">SENSOR ASSURANCE</a><div class="navlinks"><a href="/">Assurance Briefs</a><a href="/research.html">Research</a><a href="/author.html">About the Author</a></div></div></nav><main><header class="pageintro"><div class="wrap"><div class="eyebrow">Publication archive</div><h1>Assurance Briefs</h1><p class="lead">Browse the existing source-linked briefs. Full-length independent articles and additional topic filters will be added as content is verified.</p></div></header><section id="briefs" class="pagecards"><div class="wrap"><div class="head"><h2>Latest briefs</h2><p>Source-grounded engineering analysis. Every brief links to relevant primary material; interpretations are identified as analysis.</p></div><div class="briefs">
 <article class="card brief featured"><span class="kicker">Featured brief · Standards Watch · AI assurance</span><div class="feature-art" role="img" aria-label="Abstract technical visualization of signals and sensor monitoring"><div class="art-orbit"></div><div class="art-bars"></div><strong>OBSERVABILITY<br>× ASSURANCE</strong></div><h3>AI observability is becoming part of the assurance conversation</h3><p>IEEE P4213 is developing a framework for AI-system observability, including the measurements and operational visibility needed to assess reliability and safety. For Physical AI, that pushes assurance beyond model accuracy toward evidence about how the deployed system behaves.</p><a class="source-btn" href="https://standards.ieee.org/ieee/4213/12758/" target="_blank" rel="noopener">Read source ↗</a><div class="source-note">Primary source: IEEE Standards Association</div><div class="meta">Standards brief · October 2026</div></article>
 
