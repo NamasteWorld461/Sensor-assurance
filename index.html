@@ -112,6 +112,29 @@ nav .social-placeholder{font-size:inherit!important;font-weight:650;color:#696a7
  nav .navlinks>a{padding:0}
  nav .social-nav{gap:26px}
 }
+
+/* Compact, fully visible navigation and reduced mobile whitespace */
+@media(max-width:650px){
+  nav .wrap{display:grid;grid-template-columns:minmax(75px,1fr) auto;grid-template-rows:auto auto;gap:9px 12px;align-items:center;min-height:0;padding:13px 0 12px;width:calc(100% - 32px)}
+  nav .brand{grid-column:1;grid-row:1;font-size:21px;min-width:0;max-width:none;line-height:1.05;white-space:normal}
+  nav .navlinks{display:contents}
+  nav .navlinks>a{grid-column:1 / -1;grid-row:2;font-size:15px;padding:0;white-space:nowrap}
+  nav .social-nav{grid-column:2;grid-row:1;display:flex;gap:12px;justify-content:flex-end;white-space:nowrap;min-width:0;padding:0;margin:0}
+  nav .social-placeholder{font-size:14px!important;white-space:nowrap;color:#50525e;text-decoration:underline;text-decoration-color:#ced0d6;text-underline-offset:4px}
+  .hero{padding:36px 0 38px}
+  .hero h1{font-size:clamp(2.9rem,11.2vw,4.5rem);margin:20px auto 22px;line-height:1.03}
+  .hero .lead{font-size:1.1rem;line-height:1.48}
+  #about-publication{padding:34px 0 42px}
+  #about-publication h2{margin-bottom:20px}
+  #about-publication .intro{font-size:1.12rem;line-height:1.6}
+}
+@media(min-width:651px){
+  nav .wrap{min-height:90px;padding:12px 0}
+  .hero{padding:65px 0 64px}
+  .hero h1{margin:28px auto 24px}
+  #about-publication{padding:50px 0 56px}
+  #about-publication h2{margin-bottom:32px}
+}
 </style></head><body>
 <nav><div class="wrap"><a class="brand" href="/">Aruni<br>Basu</a><div class="navlinks"><a href="#briefs">Assurance Briefs</a><span class="social-nav" aria-label="Social profiles"><a class="social-placeholder" aria-disabled="true" tabindex="-1" title="LinkedIn profile link coming soon">LinkedIn</a><a class="social-placeholder" aria-disabled="true" tabindex="-1" title="Instagram profile link coming soon">Instagram</a></span></div></div></nav>
 <main>
