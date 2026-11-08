@@ -71,17 +71,45 @@ footer,.footerlinks,.disclaimer{font-size:14px;line-height:1.7;color:#454753}
 .topic-filter[aria-pressed="true"]{background:#171820;border-color:#171820;color:#fff}
 .brief[hidden]{display:none!important}
 .filter-empty{color:#525460;padding:18px 0}
-.social-nav{display:inline-flex;align-items:center;gap:15px;border-left:1px solid #d7d7dd;padding-left:18px}.social-placeholder{color:#555763;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:4px;cursor:default}.social-nav .social-placeholder{font-size:14px;font-weight:650}@media(max-width:650px){.social-nav{gap:14px;padding-left:14px;flex-shrink:0}.social-nav .social-placeholder{font-size:14px}} </style></head><body>
+.social-nav{display:inline-flex;align-items:center;gap:15px;border-left:1px solid #d7d7dd;padding-left:18px}.social-placeholder{color:#555763;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:4px;cursor:default}.social-nav .social-placeholder{font-size:14px;font-weight:650}@media(max-width:650px){.social-nav{gap:14px;padding-left:14px;flex-shrink:0}.social-nav .social-placeholder{font-size:14px}} 
+/* Minimal editorial hero */
+.hero{padding:100px 0 95px;background:#fafafb;border-bottom:1px solid #e5e5e9}
+.hero .wrap{max-width:990px}
+.hero .eyebrow{font-size:clamp(13px,1.8vw,18px);letter-spacing:.24em;font-weight:750;color:#646673;line-height:1.5}
+.hero h1{font-weight:850;font-size:clamp(3.7rem,9.5vw,7.6rem);letter-spacing:-.065em;line-height:1.04;margin:40px auto 32px;max-width:950px}
+.hero h1 em{color:#dc2f6b;font-style:normal}
+.hero .lead{font-size:clamp(1.2rem,2.8vw,1.8rem);line-height:1.5;max-width:840px;color:#666875;font-weight:550}
+.hero-social{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:22px;margin-top:35px;font-size:clamp(16px,2vw,20px);color:#666875;font-weight:600}
+.hero-social .social-placeholder{font-size:inherit;color:inherit;text-decoration:underline;text-decoration-color:#c2c4cc;text-decoration-style:solid;text-underline-offset:6px}
+.hero-social .dot{color:#171820}
+#about-publication{padding:64px 0 80px}
+#about-publication h2{font-size:clamp(2rem,4.2vw,2.75rem);font-weight:800;margin-bottom:60px}
+#about-publication .intro{max-width:930px;font-size:clamp(1.2rem,2.45vw,1.65rem);line-height:1.75;color:#22232b;font-weight:500}
+@media(max-width:650px){
+.hero{padding:72px 0 75px}
+.hero .eyebrow{font-size:12px;letter-spacing:.19em}
+.hero h1{font-size:clamp(3.1rem,11.9vw,4.9rem);line-height:1.06;letter-spacing:-.05em;margin:32px auto}
+.hero .lead{font-size:1.23rem;line-height:1.55}
+.hero-social{gap:15px;margin-top:28px;font-size:17px}
+#about-publication{padding:48px 0 64px}
+#about-publication h2{margin-bottom:36px}
+#about-publication .intro{font-size:1.22rem;line-height:1.72}
+}
+</style></head><body>
 <nav><div class="wrap"><a class="brand" href="/">Sensor<br>Assurance</a><div class="navlinks"><a href="#briefs">Assurance Briefs</a><a href="#research">Research</a><a href="#author">About the Author</a><span class="social-nav" aria-label="Social profiles"><a class="social-placeholder" aria-disabled="true" tabindex="-1" title="LinkedIn profile link coming soon">LinkedIn</a><a class="social-placeholder" aria-disabled="true" tabindex="-1" title="Instagram profile link coming soon">Instagram</a></span></div></div></nav>
 <main>
-<header class="hero"><div class="wrap">
-<div class="eyebrow">SENSOR ASSURANCE · INDEPENDENT TECHNICAL PERSPECTIVES</div>
-<h1>Engineering <em>assurance,</em><br>made clear.</h1>
-<p class="lead">I read research papers, follow emerging standards, and turn developments in Physical AI and intelligent sensing into bite-sized, source-linked briefs for engineers, researchers, and curious readers.</p>
-<div class="hero-links"><a href="#briefs">Read the briefs</a><a href="/archive.html">Browse the archive</a></div>
+<header class="hero" id="top"><div class="wrap">
+<div class="eyebrow">SENSOR ASSURANCE</div>
+<h1>Engineering<br><em>assurance,</em><br>made clear.</h1>
+<p class="lead">Short technical notes on safety, verification, and intelligent sensing.</p>
+<div class="hero-social" aria-label="Social profiles">
+<span class="social-placeholder" aria-disabled="true" title="LinkedIn profile link coming soon">LinkedIn</span>
+<span class="dot" aria-hidden="true">·</span>
+<span class="social-placeholder" aria-disabled="true" title="Instagram profile link coming soon">Instagram</span>
+</div>
 </div></header>
 <section class="section" id="about-publication"><div class="wrap"><h2>About</h2>
-<p class="intro">Sensor Assurance makes complex engineering research easier to understand, with practical perspectives on verification, safety, reliability, and compliance.</p></div></section>
+<p class="intro">I read research papers, follow emerging standards, and turn developments in Physical AI and intelligent sensing into bite-sized, source-linked briefs for engineers, researchers, and curious readers. My focus is on verification, safety, reliability, and compliance.</p></div></section>
 <section class="section" id="briefs"><div class="wrap"><h2>Assurance Briefs</h2>
 <div class="topic-filters" role="group" aria-label="Filter Assurance Briefs by topic">
 <button class="topic-filter" type="button" data-filter="all" aria-pressed="true">All</button>
