@@ -309,6 +309,18 @@ a:focus-visible,button:focus-visible{outline:3px solid #d72d68;outline-offset:3p
 .rf-citation{font-size:13px!important;color:#5d5e6b;line-height:1.6!important}
 @media(max-width:650px){.research-feature{margin-bottom:34px}.research-feature-header{display:block}.rf-tag{display:inline-block;margin-top:10px}.research-carousel{border-radius:16px}.research-slide{min-height:0;max-height:none;aspect-ratio:4/5;padding:20px 19px}.rs-body h3{font-size:clamp(1.75rem,7.7vw,2.9rem);line-height:1.13;margin-bottom:16px}.rs-body p{font-size:clamp(.94rem,3.8vw,1.15rem);line-height:1.46}.rs-top{font-size:11px}.rs-bottom{font-size:9px}.research-controls{align-items:flex-start;flex-wrap:wrap}.rf-paper{font-size:13px}.rf-citation{font-size:12px!important}}
 @media(max-width:360px){.research-slide{padding:17px 15px}.rs-body h3{font-size:1.68rem}.rs-body p{font-size:.92rem}.rs-bottom{font-size:8px}}
+
+/* Cover photograph followed by six slides */
+.rain-cover{padding:0!important;position:relative;background:#151724;overflow:hidden}
+.rain-cover-image{position:absolute;inset:0;background-image:linear-gradient(to bottom,rgba(7,13,26,.18),rgba(7,13,26,.85)),url("https://commons.wikimedia.org/wiki/Special:FilePath/Driving_rain_road_cars.jpg");background-position:center;background-size:cover}
+.rain-cover-overlay{z-index:1;position:relative;display:flex;flex-direction:column;justify-content:space-between;width:100%;height:100%;padding:clamp(24px,5vw,48px)}
+.rain-cover-center{margin:auto 0}
+.rain-cover-kicker{font-size:clamp(11px,1.5vw,14px);color:#f5c767;letter-spacing:.13em;font-weight:850}
+.rain-cover-center h3{font-size:clamp(2.7rem,6vw,4.8rem);line-height:1.05;letter-spacing:-.055em;color:#fff;margin:17px 0}
+.rain-cover-center p{color:#f0f0f4;font-size:clamp(1.1rem,2.4vw,1.65rem);line-height:1.45;max-width:560px}
+.rain-cover .rs-top span,.rain-cover .rs-bottom span{color:#f6f6fa}
+.rain-cover .rs-top span:first-child{color:#f5c767}
+@media(max-width:650px){.rain-cover-overlay{padding:20px 19px}.rain-cover-center h3{font-size:clamp(2.1rem,9vw,3.3rem)}.rain-cover-center p{font-size:1rem}.rain-cover-kicker{font-size:10px}}
 </style></head><body>
 <nav><div class="wrap"><a class="brand" href="/">Aruni<br>Basu</a><div class="navlinks"><a href="#briefs">Assurance Briefs</a><span class="social-nav" aria-label="Social profiles"><a class="social-placeholder" aria-disabled="true" tabindex="-1" title="LinkedIn profile link coming soon">LinkedIn</a><a class="social-placeholder" aria-disabled="true" tabindex="-1" title="Instagram profile link coming soon">Instagram</a></span></div></div></nav>
 <main>
@@ -330,46 +342,48 @@ a:focus-visible,button:focus-visible{outline:3px solid #d72d68;outline-offset:3p
 <button class="topic-filter" type="button" data-filter="standards" aria-pressed="false">Standards</button>
 </div>
 <div class="research-feature" data-topics="lidar vv safety">
-<div class="research-feature-header"><div><span class="rf-eyebrow">FEATURED · OPEN-ACCESS PAPER · SENSORS (2024)</span><h3>LiDAR validation in rainfall</h3><p>Seven slides. One peer-reviewed paper. A practical assurance perspective.</p></div><span class="rf-tag">7-slide brief</span></div>
-<div class="research-carousel" aria-label="Seven-slide LiDAR paper explainer" tabindex="0">
-<article class="research-slide is-current" data-slide="0" role="group" aria-roledescription="slide" aria-label="1 of 7" >
-<div class="rs-top"><span>01 · THE QUESTION</span><span>1 / 7</span></div>
-<div class="rs-body"><h3>Does LiDAR still see reliably in heavy rain?</h3><p>Clear-weather range alone cannot answer this. A useful validation plan must test visibility under realistic environmental stress.</p></div>
+<div class="research-feature-header"><div><span class="rf-eyebrow">FEATURED · OPEN ACCESS · SENSORS</span><h3>LiDAR performance in rainfall</h3><p>Start with the rain-car cover, then swipe through six short engineering takeaways.</p></div><span class="rf-tag">Cover + 6 slides</span></div>
+<div class="research-carousel" aria-label="LiDAR research brief: cover and six slides" tabindex="0">
+<article class="research-slide rain-cover is-current" data-slide="0" role="group" aria-roledescription="slide" aria-label="Cover" >
+<div class="rain-cover-image" role="img" aria-label="Cars driving through heavy rain on a wet road"></div>
+<div class="rain-cover-overlay">
+<div class="rs-top"><span>ASSURANCE BRIEFS · LIDAR</span><span>COVER</span></div>
+<div class="rain-cover-center"><span class="rain-cover-kicker">OPEN-ACCESS PAPER EXPLAINED</span><h3>When rain meets LiDAR.</h3><p>What a controlled rainfall study tells us about sensor validation.</p></div>
+<div class="rs-bottom"><span>ARUNI BASU · 6-SLIDE EXPLAINER</span><a href="https://www.mdpi.com/1424-8220/24/1/14" target="_blank" rel="noopener noreferrer">Read the paper ↗</a></div>
+</div></article>
+<article class="research-slide" data-slide="1" role="group" aria-roledescription="slide" aria-label="Slide 1 of 6" hidden>
+<div class="rs-top"><span>01 · THE PROBLEM</span><span>1 / 6</span></div>
+<div class="rs-body"><h3>What does rain change for LiDAR?</h3><p>A sensor that performs well in clear weather may return weaker signals in rain. We need evidence across conditions—not just a headline range specification.</p></div>
 <div class="rs-bottom"><span>ARUNI BASU · ASSURANCE BRIEFS</span><a href="https://www.mdpi.com/1424-8220/24/1/14" target="_blank" rel="noopener noreferrer">Read the open-access paper ↗</a></div>
 </article>
-<article class="research-slide" data-slide="1" role="group" aria-roledescription="slide" aria-label="2 of 7" hidden>
-<div class="rs-top"><span>02 · THE EXPERIMENT</span><span>2 / 7</span></div>
-<div class="rs-body"><h3>Rain, range, angle—and the target itself.</h3><p>The researchers varied rainfall from 0 to 40 mm/h, distances from 10 to 30 m, and observation angle using a VLP-32 LiDAR.</p></div>
+<article class="research-slide" data-slide="2" role="group" aria-roledescription="slide" aria-label="Slide 2 of 6" hidden>
+<div class="rs-top"><span>02 · TEST SETUP</span><span>2 / 6</span></div>
+<div class="rs-body"><h3>Vary the conditions, not just the target.</h3><p>The researchers tested a VLP-32 in a darkroom at 10–30 m, rainfall from 0–40 mm/h, and viewing angles of 0°, 30°, and 60°.</p></div>
 <div class="rs-bottom"><span>ARUNI BASU · ASSURANCE BRIEFS</span><a href="https://www.mdpi.com/1424-8220/24/1/14" target="_blank" rel="noopener noreferrer">Read the open-access paper ↗</a></div>
 </article>
-<article class="research-slide" data-slide="2" role="group" aria-roledescription="slide" aria-label="3 of 7" hidden>
-<div class="rs-top"><span>03 · THE MEASURES</span><span>3 / 7</span></div>
-<div class="rs-body"><h3>Look beyond a single accuracy number.</h3><p>They tracked return intensity and the number of point-cloud points. Both tell us whether enough usable evidence reaches perception.</p></div>
+<article class="research-slide" data-slide="3" role="group" aria-roledescription="slide" aria-label="Slide 3 of 6" hidden>
+<div class="rs-top"><span>03 · THE METRICS</span><span>3 / 6</span></div>
+<div class="rs-body"><h3>Intensity and point count tell different stories.</h3><p>The study tracked reflected-signal intensity and point-cloud counts. Both help characterize what the sensor actually records.</p></div>
 <div class="rs-bottom"><span>ARUNI BASU · ASSURANCE BRIEFS</span><a href="https://www.mdpi.com/1424-8220/24/1/14" target="_blank" rel="noopener noreferrer">Read the open-access paper ↗</a></div>
 </article>
-<article class="research-slide" data-slide="3" role="group" aria-roledescription="slide" aria-label="4 of 7" hidden>
-<div class="rs-top"><span>04 · THE FINDING</span><span>4 / 7</span></div>
-<div class="rs-body"><h3>Low-reflectivity targets are especially vulnerable.</h3><p>For a 5% reflective reference material, the study recorded no intensity or point-count values beyond 25 m, even without rainfall.</p></div>
+<article class="research-slide" data-slide="4" role="group" aria-roledescription="slide" aria-label="Slide 4 of 6" hidden>
+<div class="rs-top"><span>04 · KEY RESULTS</span><span>4 / 6</span></div>
+<div class="rs-body"><h3>Reflectivity and distance are critical.</h3><p>A 5%-reflective reference target produced no recorded intensity or points beyond 25 m. High-reflectivity targets also showed large intensity losses under combined harsh conditions.</p></div>
 <div class="rs-bottom"><span>ARUNI BASU · ASSURANCE BRIEFS</span><a href="https://www.mdpi.com/1424-8220/24/1/14" target="_blank" rel="noopener noreferrer">Read the open-access paper ↗</a></div>
 </article>
-<article class="research-slide" data-slide="4" role="group" aria-roledescription="slide" aria-label="5 of 7" hidden>
-<div class="rs-top"><span>05 · WHAT CHANGED</span><span>5 / 7</span></div>
-<div class="rs-body"><h3>Bad conditions compound one another.</h3><p>At 30 m and 40 mm/h rainfall, a high-reflectivity reference target's reported intensity was 9.8 versus 79.6 at 10 m without rain.</p></div>
+<article class="research-slide" data-slide="5" role="group" aria-roledescription="slide" aria-label="Slide 5 of 6" hidden>
+<div class="rs-top"><span>05 · MY TAKEAWAY</span><span>5 / 6</span></div>
+<div class="rs-body"><h3>A single passing test is not an assurance case.</h3><p>I would map verification across distance, surface reflectivity, incidence angle, and rainfall—then document the limits and uncertainty of the evidence.</p></div>
 <div class="rs-bottom"><span>ARUNI BASU · ASSURANCE BRIEFS</span><a href="https://www.mdpi.com/1424-8220/24/1/14" target="_blank" rel="noopener noreferrer">Read the open-access paper ↗</a></div>
 </article>
-<article class="research-slide" data-slide="5" role="group" aria-roledescription="slide" aria-label="6 of 7" hidden>
-<div class="rs-top"><span>06 · ENGINEERING IMPLICATION</span><span>6 / 7</span></div>
-<div class="rs-body"><h3>A pass at one test point is not assurance.</h3><p>My takeaway: build a test matrix across range, reflectivity, angle and weather. State where the sensing evidence stops being dependable.</p></div>
-<div class="rs-bottom"><span>ARUNI BASU · ASSURANCE BRIEFS</span><a href="https://www.mdpi.com/1424-8220/24/1/14" target="_blank" rel="noopener noreferrer">Read the open-access paper ↗</a></div>
-</article>
-<article class="research-slide" data-slide="6" role="group" aria-roledescription="slide" aria-label="7 of 7" hidden>
-<div class="rs-top"><span>07 · THE LIMIT</span><span>7 / 7</span></div>
-<div class="rs-body"><h3>A chamber result isn't a road guarantee.</h3><p>This study tested one LiDAR model in a controlled darkroom. Different sensor architectures and natural weather need their own evidence.</p></div>
+<article class="research-slide" data-slide="6" role="group" aria-roledescription="slide" aria-label="Slide 6 of 6" hidden>
+<div class="rs-top"><span>06 · LIMITATIONS</span><span>6 / 6</span></div>
+<div class="rs-body"><h3>A controlled test is not the whole road.</h3><p>The findings concern one LiDAR model in simulated rainfall. Natural weather, longer range, and other sensor designs still require separate validation.</p></div>
 <div class="rs-bottom"><span>ARUNI BASU · ASSURANCE BRIEFS</span><a href="https://www.mdpi.com/1424-8220/24/1/14" target="_blank" rel="noopener noreferrer">Read the open-access paper ↗</a></div>
 </article>
 </div>
-<div class="research-controls"><div class="rs-navigation"><button class="rs-control" id="rs-prev" type="button" aria-label="Previous slide" disabled>←</button><span id="rs-status" aria-live="polite">Slide 1 of 7</span><button class="rs-control" id="rs-next" type="button" aria-label="Next slide">→</button></div><a class="rf-paper" href="https://www.mdpi.com/1424-8220/24/1/14" target="_blank" rel="noopener noreferrer">Original research article ↗</a></div>
-<p class="rf-citation">Source: Choe, Cho &amp; Chung, “Performance Verification of Autonomous Driving LiDAR Sensors under Rainfall Conditions in Darkroom,” <i>Sensors</i> 24(1), 14. DOI: 10.3390/s24010014. Interpretations are my independent engineering commentary.</p>
+<div class="research-controls"><div class="rs-navigation"><button class="rs-control" id="rs-prev" type="button" aria-label="Previous slide" disabled>←</button><span id="rs-status" aria-live="polite">Cover · 0 of 6</span><button class="rs-control" id="rs-next" type="button" aria-label="Next slide">→</button></div><a class="rf-paper" href="https://www.mdpi.com/1424-8220/24/1/14" target="_blank" rel="noopener noreferrer">Original paper ↗</a></div>
+<p class="rf-citation">Study: Choe, Cho &amp; Chung, <i>Sensors</i> 24(1), 14 (published December 2023; issue 2024). DOI: 10.3390/s24010014. Cover photograph: Jon Sullivan, public domain, via Wikimedia Commons. Commentary is independent technical interpretation.</p>
 </div>
 <div class="stack">
 <article class="brief" data-topics="physical-ai standards"><div class="meta">Standards Watch<br>October 2026</div><div><h3>AI observability is becoming part of the assurance conversation</h3><p>IEEE P4213 is developing a framework for AI-system observability. For Physical AI, assurance must consider operational evidence as well as model performance.</p><a class="source" href="https://standards.ieee.org/ieee/4213/12758/" target="_blank" rel="noopener noreferrer">Primary source: IEEE Standards Association ↗</a></div></article>
@@ -408,7 +422,7 @@ empty.hidden=shown!==0;
   position=Math.min(slides.length-1,Math.max(0,i));
   slides.forEach((slide,index)=>{slide.hidden=index!==position;slide.classList.toggle("is-current",index===position)});
   previous.disabled=position===0;next.disabled=position===slides.length-1;
-  status.textContent="Slide "+(position+1)+" of "+slides.length;
+  status.textContent=position===0?"Cover · 0 of 6":"Slide "+position+" of 6";
  }
  previous.addEventListener("click",()=>show(position-1));
  next.addEventListener("click",()=>show(position+1));
