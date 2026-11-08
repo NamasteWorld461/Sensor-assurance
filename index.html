@@ -321,6 +321,14 @@ a:focus-visible,button:focus-visible{outline:3px solid #d72d68;outline-offset:3p
 <section class="section" id="about-publication"><div class="wrap"><h2>About</h2>
 <p class="intro">I read research papers, follow emerging standards, and turn developments in Physical AI and intelligent sensing into bite-sized, source-linked briefs for engineers, researchers, and curious readers. My focus is on verification, safety, reliability, and compliance.</p></div></section>
 <section class="section" id="briefs"><div class="wrap"><h2>Assurance Briefs</h2>
+<div class="topic-filters" role="group" aria-label="Filter Assurance Briefs by topic">
+<button class="topic-filter" type="button" data-filter="all" aria-pressed="true">All</button>
+<button class="topic-filter" type="button" data-filter="physical-ai" aria-pressed="false">Physical AI</button>
+<button class="topic-filter" type="button" data-filter="lidar" aria-pressed="false">LiDAR</button>
+<button class="topic-filter" type="button" data-filter="vv" aria-pressed="false">V&amp;V</button>
+<button class="topic-filter" type="button" data-filter="safety" aria-pressed="false">Safety</button>
+<button class="topic-filter" type="button" data-filter="standards" aria-pressed="false">Standards</button>
+</div>
 <div class="research-feature" data-topics="lidar vv safety">
 <div class="research-feature-header"><div><span class="rf-eyebrow">FEATURED · OPEN-ACCESS PAPER · SENSORS (2024)</span><h3>LiDAR validation in rainfall</h3><p>Seven slides. One peer-reviewed paper. A practical assurance perspective.</p></div><span class="rf-tag">7-slide brief</span></div>
 <div class="research-carousel" aria-label="Seven-slide LiDAR paper explainer" tabindex="0">
@@ -363,14 +371,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #d72d68;outline-offset:3p
 <div class="research-controls"><div class="rs-navigation"><button class="rs-control" id="rs-prev" type="button" aria-label="Previous slide" disabled>←</button><span id="rs-status" aria-live="polite">Slide 1 of 7</span><button class="rs-control" id="rs-next" type="button" aria-label="Next slide">→</button></div><a class="rf-paper" href="https://www.mdpi.com/1424-8220/24/1/14" target="_blank" rel="noopener noreferrer">Original research article ↗</a></div>
 <p class="rf-citation">Source: Choe, Cho &amp; Chung, “Performance Verification of Autonomous Driving LiDAR Sensors under Rainfall Conditions in Darkroom,” <i>Sensors</i> 24(1), 14. DOI: 10.3390/s24010014. Interpretations are my independent engineering commentary.</p>
 </div>
-<div class="topic-filters" role="group" aria-label="Filter Assurance Briefs by topic">
-<button class="topic-filter" type="button" data-filter="all" aria-pressed="true">All</button>
-<button class="topic-filter" type="button" data-filter="physical-ai" aria-pressed="false">Physical AI</button>
-<button class="topic-filter" type="button" data-filter="lidar" aria-pressed="false">LiDAR</button>
-<button class="topic-filter" type="button" data-filter="vv" aria-pressed="false">V&amp;V</button>
-<button class="topic-filter" type="button" data-filter="safety" aria-pressed="false">Safety</button>
-<button class="topic-filter" type="button" data-filter="standards" aria-pressed="false">Standards</button>
-</div><div class="stack">
+<div class="stack">
 <article class="brief" data-topics="physical-ai standards"><div class="meta">Standards Watch<br>October 2026</div><div><h3>AI observability is becoming part of the assurance conversation</h3><p>IEEE P4213 is developing a framework for AI-system observability. For Physical AI, assurance must consider operational evidence as well as model performance.</p><a class="source" href="https://standards.ieee.org/ieee/4213/12758/" target="_blank" rel="noopener noreferrer">Primary source: IEEE Standards Association ↗</a></div></article>
 <article class="brief" data-topics="vv standards"><div class="meta">Validation</div><div><h3>Evidence matters as much as the metric</h3><p>Performance results are more useful when test conditions, uncertainty, traceability, repeatability and operating limits are explicit.</p><a class="source" href="https://www.iso.org/standard/35733.html" target="_blank" rel="noopener noreferrer">Reference: ISO/IEC 17025 ↗</a></div></article>
 <article class="brief" data-topics="safety physical-ai"><div class="meta">Automated Systems</div><div><h3>Assurance beyond nominal performance</h3><p>Automated-driving assurance includes operating conditions, limitations and verification evidence—not just ideal-case system performance.</p><a class="source" href="https://saemobilus.sae.org/topics/electrical-electronics-and-avionics/automation/driving-automation/automated-driving-systems" target="_blank" rel="noopener noreferrer">Reference: SAE Mobilus ↗</a></div></article>
@@ -383,7 +384,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #d72d68;outline-offset:3p
 <script>
 (function(){
 const buttons=Array.from(document.querySelectorAll('.topic-filter'));
-const briefs=Array.from(document.querySelectorAll('#briefs .brief[data-topics]'));
+const briefs=Array.from(document.querySelectorAll('#briefs .brief[data-topics], #briefs .research-feature[data-topics]'));
 const empty=document.getElementById('filter-empty');
 buttons.forEach(button=>button.addEventListener('click',()=>{
 const selected=button.dataset.filter;
