@@ -203,6 +203,84 @@ a:focus-visible,button:focus-visible{outline:3px solid #d72d68;outline-offset:3p
  .topic-filter{font-size:13px;padding-inline:12px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Single-row navigation matching the reference screenshot */
+@media(max-width:650px){
+ nav .wrap{
+  display:flex!important;
+  flex-wrap:nowrap!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:20px!important;
+  padding:17px 0!important;
+  min-height:100px!important;
+  width:calc(100% - 32px)!important;
+ }
+ nav .brand{
+  display:block!important;
+  flex:0 0 91px!important;
+  width:91px!important;
+  min-width:91px!important;
+  max-width:91px!important;
+  grid-column:auto!important;
+  grid-row:auto!important;
+  font-size:22px!important;
+  font-weight:850!important;
+  line-height:1.08!important;
+ }
+ nav .navlinks{
+  display:flex!important;
+  flex:1 1 auto!important;
+  width:auto!important;
+  min-width:0!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  flex-wrap:nowrap!important;
+  overflow-x:auto!important;
+  overflow-y:hidden!important;
+  white-space:nowrap!important;
+  gap:22px!important;
+  padding:9px 0!important;
+  margin:0!important;
+  font-size:17px!important;
+  scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;
+ }
+ nav .navlinks::-webkit-scrollbar{display:none}
+ nav .navlinks>a{
+  display:inline-block!important;
+  flex:0 0 auto!important;
+  grid-column:auto!important;
+  grid-row:auto!important;
+  white-space:nowrap!important;
+  font-size:17px!important;
+  padding:4px 0!important;
+ }
+ nav .social-nav{
+  display:inline-flex!important;
+  flex:0 0 auto!important;
+  grid-column:auto!important;
+  grid-row:auto!important;
+  gap:22px!important;
+  justify-content:flex-start!important;
+  align-items:center!important;
+  white-space:nowrap!important;
+  padding:0!important;
+  margin:0!important;
+ }
+ nav .social-placeholder{
+  font-size:17px!important;
+  white-space:nowrap!important;
+  text-decoration:none!important;
+ }
+}
+@media(max-width:380px){
+ nav .wrap{gap:14px!important}
+ nav .brand{flex-basis:84px!important;width:84px!important;min-width:84px!important;max-width:84px!important;font-size:21px!important}
+ nav .navlinks{gap:17px!important;font-size:16px!important}
+ nav .navlinks>a,nav .social-placeholder{font-size:16px!important}
+ nav .social-nav{gap:17px!important}
+}
 </style></head><body>
 <nav><div class="wrap"><a class="brand" href="/">Aruni<br>Basu</a><div class="navlinks"><a href="#briefs">Assurance Briefs</a><span class="social-nav" aria-label="Social profiles"><a class="social-placeholder" aria-disabled="true" tabindex="-1" title="LinkedIn profile link coming soon">LinkedIn</a><a class="social-placeholder" aria-disabled="true" tabindex="-1" title="Instagram profile link coming soon">Instagram</a></span></div></div></nav>
 <main>
